@@ -12,7 +12,6 @@ CREATE TABLE Categories (
 
 CREATE TABLE HotelRooms (
 	HotelRoomId INT PRIMARY KEY IDENTITY,
-	RoomNumber INT NOT NULL,
 	CategoryId INT FOREIGN KEY REFERENCES Categories(CategoryId) NOT NULL,
 	[Description] NVARCHAR(MAX) NOT NULL,
 	[Floor] INT NOT NULL,
@@ -64,5 +63,3 @@ CREATE TABLE Treaties (
 	SumOfPay INT NOT NULL,
 	PaymentMethod NVARCHAR(10) NOT NULL,
 );
-
---truncate table Clients
